@@ -206,7 +206,7 @@ if __name__ == '__main__':
        
     X_file_path = r'/features.csv' 
     y_file_path = r'/endpoint.csv'  
-    output_patoutput' 
+    output_path =r'output' 
     
     # Determine the optimal number of clusters
     min_clusters = 2
