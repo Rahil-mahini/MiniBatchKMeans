@@ -36,7 +36,7 @@ def load_y_data(y_file_path):
         df_Y = pd.read_csv(y_file_path, sep= ',' )
         print ( "y  shape ", df_Y.shape)
         
-        # exclude the first column and first row
+        # exclude the first column of features' names
         df_Y = df_Y.iloc[:, 1:]      
         print ( "y sliced dataframe shape", df_Y.shape)
         print ( "y sliced dataframe", df_Y)
@@ -165,11 +165,8 @@ def select_closest_features(X_file_path, distances, num_features):
 
                     
 
-
 # Function gets the pandas dataframe  and write it to csv file and returns file path dictionaty    
-def write_to_csv(X_selected, output_path):
-    
-       
+def write_to_csv(X_selected, output_path):           
     
     # Create a separate directory for the output file
     try:
