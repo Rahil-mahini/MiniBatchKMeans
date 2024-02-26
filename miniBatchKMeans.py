@@ -176,12 +176,12 @@ def write_to_csv(X_selected, output_path):
         
       # Create the output directory if it doesn't exist                                                        
        os.makedirs(output_path, exist_ok = True)     
-       file_name = 'miniBatchKMeans_all.csv'
+       file_name = 'miniBatchKMeans.csv'
        file_path = os.path.join(output_path, file_name)
                 
        X_selected.to_csv(file_path, sep = ',', header =True, index = True ) 
 
-       file_path_dict = {'miniBatchKMeans_all': file_path}
+       file_path_dict = {'miniBatchKMeans': file_path}
        print("CSV file written successfully.")
        print ("CSV file size is  " , os.path.getsize(file_path))
        print ("CSV file column number is  " , X_selected.shape[1])
@@ -204,9 +204,9 @@ if __name__ == '__main__':
     client = Client(cluster) 
 
        
-    X_file_path = r'/mmfs1/projects/bakhtiyor.rasulev/Rahil/a67kpa_filtered/combinatorial_filtered.csv' 
-    y_file_path = r'/mmfs1/projects/bakhtiyor.rasulev/Rahil/a67kpa_filtered/endpoint_a67kpa.csv'  
-    output_path = r'a67kpa_filtered' 
+    X_file_path = r'/features.csv' 
+    y_file_path = r'/endpoint.csv'  
+    output_patoutput' 
     
     # Determine the optimal number of clusters
     min_clusters = 2
